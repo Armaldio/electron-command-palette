@@ -1,0 +1,32 @@
+{
+  "name": "electron-command-palette",
+  "version": "0.0.9",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "author": "Armaldio",
+  "license": "MIT",
+  "dependencies": {
+    "fuse.js": "^3.0.5",
+    "jquery": "^3.2.1",
+    "mark.js": "github:julmot/mark.js"
+  },
+  "devDependencies": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/armaldio/electron-command-palette.git"
+  },
+  "bugs": {
+    "url": "https://github.com/armaldio/electron-command-palette/issues"
+  },
+  "homepage": "https://github.com/armaldio/electron-command-palette#readme",
+  "description": "A very early-stage command palette for Electron",
+  "keywords": [
+    "command-palette",
+    "electron",
+    "armaldio",
+    "nodejs"
+  ]
+}

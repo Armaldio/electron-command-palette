@@ -1,0 +1,120 @@
+<style>
+
+    .palette {
+
+    @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+        font-family: 'Roboto', sans-serif;
+
+        border: 1px solid #2e2f31;
+        padding: 10px;
+        border-radius: 2px;
+
+        background-color: #202123;
+
+        -webkit-box-shadow: 0 0 48px -5px rgba(0, 0, 0, 0.75);
+
+        user-select: none;
+
+        display: none;
+        width: 50%;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        margin: 0 0 0 -25%;
+    }
+
+    .palette textarea:focus, input:focus{
+        outline: none;
+    }
+
+    .palette .hide {
+        display: none;
+    }
+
+    .palette-input {
+        padding: 10px 20px;
+        border: 1px solid #161718;
+        border-radius: 3px;
+        color: #fff;
+        background: #2d2f31;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .palette-list .command {
+        box-sizing: border-box;
+        width: 100%;
+        list-style-type: none;
+        background: #27292b;
+        color: #aaa;
+
+        padding: 0 10px 0 10px;
+        border-radius: 2px;
+
+        margin-top: 7px;
+        display: table;
+    }
+
+    .palette-list .command:hover {
+        background: #4182c4;
+        cursor: pointer;
+        color: #fff;
+    }
+
+    .palette-list .command:hover .description {
+        color: #fff;
+    }
+
+    .palette-list .right {
+        width: 30%;
+        display: table-cell;
+        text-align: right;
+        vertical-align: middle;
+    }
+
+    .palette-list .left {
+        width: 70%;
+        display: table-cell;
+        text-align: left;
+        vertical-align: middle;
+    }
+
+    .palette-list .title {
+        font-size: 20px;
+        margin: 10px 3px 10px 3px;
+    }
+
+    .palette-list .description {
+        font-size: 15px;
+        margin: 10px 3px 10px 3px;
+        color: #636363;
+    }
+
+    .palette-list .shortcut {
+
+    }
+
+    .palette-list .shortcut span {
+        background-color: #383838;
+        font-size: 13px;
+        padding: 8px;
+        border-radius: 2px;
+    }
+
+    mark {
+        background: transparent;
+        color: #ffffff;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+
+</style>
+
+<div class="palette">
+    <input type="text" value="" class="palette-input">
+    <div class="palette-list">
+        <!-- Commands will go here -->
+    </div>
+</div>
