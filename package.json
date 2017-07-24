@@ -1,6 +1,6 @@
 {
   "name": "electron-command-palette",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0"
