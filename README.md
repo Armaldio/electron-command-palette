@@ -1,5 +1,8 @@
-# Electron Command Palette
+# Electron Command Palette 
 A very early-stage command palette for Electron
+
+[![npm version](https://badge.fury.io/js/electron-command-palette.svg)](https://badge.fury.io/js/electron-command-palette)
+[![Build Status](https://travis-ci.org/armaldio/electron-command-palette.svg?branch=master)](https://travis-ci.org/armaldio/electron-command-palette)
 
 ![PRESENTATION GIF](img/Commandpalette.gif)
 
