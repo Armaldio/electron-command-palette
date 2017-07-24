@@ -24,9 +24,9 @@ const cmds       = require("./commands.json");
 
 let palette = new CmdPalette();
 
-palette.register("saveproject", function() {
+/*palette.register("saveproject", function() {
 	Project.save();
-});
+});*/
 
 palette.add(cmds);
 palette.show();
