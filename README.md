@@ -1,17 +1,22 @@
 # Electron Command Palette 
-A very early-stage command palette for Electron
+A nice-looking command palette for Electron
 
 [![npm version](https://badge.fury.io/js/electron-command-palette.svg)](https://badge.fury.io/js/electron-command-palette)
 [![Build Status](https://travis-ci.org/armaldio/electron-command-palette.svg?branch=master)](https://travis-ci.org/armaldio/electron-command-palette)
+[![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
+[![Repo Status](https://img.shields.io/badge/status-Maintained-brightgreen.svg)](https://github.com/armaldio/electron-command-palette)
 
 ![PRESENTATION GIF](img/Commandpalette.gif)
 
 ## Features
- * Title
- * Description
- * Electron Accelerator
- * Action (function executed on click) *
- * Category
+ * Searchable
+ * Highly customizable *
+ * Show **Title** - **Description** - **Shortcut** and **Category**   
+ * Register local shortcuts *
+ * Register custom actions on click *
+
+
+\* *planned feature*
  
 ![FEATURE IMAGE](img/Commandpalette.png)
 
@@ -20,19 +25,30 @@ A very early-stage command palette for Electron
 
 ## Usage
 
+### Mandatory
+
 **renderer.js** :
 ```js
 const CmdPalette = require("electron-command-palette");
-const cmds       = require("./commands.json");
 
 let palette = new CmdPalette();
+```
 
-/*palette.register("saveproject", function() {
-	Project.save();
-});*/
+### Add commands
+```js
+const cmds       = require("./commands.json");
 
+//JSON style
 palette.add(cmds);
-palette.show();
+
+//inline style
+palette.add({
+    "title": "New project",
+    "category": "Project",
+    "description": "Create a new project from scratch",
+    "shortcut": "CmdOrCtrl+Shift+N",
+    "action": "newproject"
+})
 ```
 
 **commands.json** :
@@ -55,11 +71,49 @@ palette.show();
 ]
 ```
 
+### Register functions
+**renderer.js**: 
+```js
+const functions  = require("./functions");
+
+//Module style
+palette.register(functions);
+
+//Inline style
+palette.register("saveproject", function() {
+	Project.save();
+});
+```
+
+**functions.js**:
+```js
+module.exports = [
+	{
+		"key"   : "newproject",
+		"action": function () {
+			console.log("Save project");
+		}
+	},
+	{
+		"key"   : "openproject",
+		"action": function () {
+			console.log("Open project");
+		}
+	}
+];
+```
+
+### Display
+```js
+palette.show();
+palette.hide();
+```
+
 ## TODO
- * [ ] Tidy repo  
- * [ ] Register functions
+ * [X] Tidy repo  
+ * [X] Register functions
  * [ ] register shortcuts
- * [ ] Trigger correct action on click
+ * [X] Trigger correct action on click
  * [ ] Fix bad fuzzy search
  * [ ] Customization options (position, CSS classes, themes)
 
