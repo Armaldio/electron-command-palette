@@ -8,6 +8,10 @@ A nice-looking command palette for Electron
 
 ![PRESENTATION GIF](img/Commandpalette.gif)
 
+<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/xUwNPd323FogQwpUUpKNVYuT/armaldio/electron-command-palette'>
+  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/xUwNPd323FogQwpUUpKNVYuT/armaldio/electron-command-palette.svg' />
+</a>
+
 ## Features
  * Searchable
  * Highly customizable *
