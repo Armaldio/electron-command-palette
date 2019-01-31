@@ -13,7 +13,7 @@
     "mark.js": "^8.11.1"
   },
   "devDependencies": {
-    "xo": "^0.18.2"
+    "xo": "^0.24.0"
   },
   "repository": {
     "type": "git",
